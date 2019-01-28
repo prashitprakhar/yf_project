@@ -1,0 +1,14 @@
+export const EMAIL_CHANGED = 'email_changed';
+export const PASSWORD_CHANGED = 'password_changed';
+export const LOGIN_USER_SUCCESS = 'login_user_success';
+export const LOGIN_USER_FAIL = 'login_user_fail';
+export const LOGIN_USER_PROGRESS = 'login_user_progress';
+export const BAR_CHART_DATA_FETCH_SUCCESS = 'bar_chart_data_fetch_success';
+export const QUERY_ENTERED = 'query_entered';
+export const IMAGE_UPLOAD_PROGRESS = 'image_upload_progress';
+export const IMAGE_UPLOAD_SUCCESS = 'image_upload_success';
+export const IMAGE_UPLOAD_FAIL = 'image_upload_fail';
+export const IMAGE_FETCH_SUCCESS = 'image_fetch_success';
+export const PHONE_NUMBER_CHANGED = 'phone_number_changed';
+export const PHONE_LOGIN_USER_SUCCESS = 'phone_login_user_success';
+export const PHONE_LOGIN_USER_FAIL = 'phone_login_user_fail';
