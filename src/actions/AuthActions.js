@@ -44,7 +44,7 @@ const employeeDatabaseCreateDispatcher = (dispatch, user) => {
     //console.log("employeeName, employeePhone, shift : ", employeeName, employeePhone, shift)
     const { currentUser } = firebase.auth();
     userUID = currentUser.uid;
-    console.log("************ CurrentUser *************",currentUser)
+    //console.log("************ CurrentUser *************",currentUser)
     //return (dispatch) => {
         firebase.database().ref(`/users/${currentUser.uid}/userDetails`)
         // .push({ employeeName, employeePhone, shift })

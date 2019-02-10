@@ -27,7 +27,8 @@ class UserHomepage extends Component {
     //   }
 
     async onChooseImagePress() {
-        this.props.userDataFetch()
+        //console.log("this.props.docid ####### HomePage %%%%%%%%%%",this.props.docId)
+        //this.props.userDataFetch()
         const results = await Promise.all([
             Permissions.askAsync(Permissions.CAMERA),
             Permissions.askAsync(Permissions.CAMERA_ROLL)
@@ -116,7 +117,7 @@ class UserHomepage extends Component {
         return (
             <View style={styles.containerStyle}>
                 <Text style={Platform.OS === 'android' ? styles.textStyleAndroid : styles.textStyleIOS}>Welcome {this.usernameDisplay()}. You successfully got in....</Text>
-                
+
                 <Button
                     title='Upload Image'
                     onPress={this.onChooseImagePress.bind(this)}
@@ -162,14 +163,18 @@ const mapStateToProps = state => {
     //console.log("#$$$$$$*********** STATE **********$$$$$$$$$#",state)
     const { error,
         uploadProgress,
-        downloadUrl
+        downloadUrl,
+        docId,
+        completeDoc
     } = state.imageProcessing;
     const { user } = state.auth;
     return {
         error,
         uploadProgress,
         downloadUrl,
-        user
+        user,
+        docId,
+        completeDoc
     }
 }
 

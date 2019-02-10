@@ -1,7 +1,8 @@
 import React from 'react';
-import { View } from 'react-native';
+import { View, StyleSheet } from 'react-native';
 
-const CardSection = (props) => {
+const CardSectionGeneral = (props) => {
+    console.log("********** CardSectionGeneral **************",props)
     return (
         <View style={styles.cardSectionContainerStyle}>
         {props.children}
@@ -9,7 +10,7 @@ const CardSection = (props) => {
     )
 }
 
-const styles = {
+const styles = StyleSheet.create({
     cardSectionContainerStyle : {
         borderBottomWidth : 1,
         padding : 5,
@@ -24,6 +25,6 @@ const styles = {
         borderColor : '#FFFFFF',
         position : 'relative'
     }
-}
+})
 
-export { CardSection };
+export default CardSectionGeneral ;
